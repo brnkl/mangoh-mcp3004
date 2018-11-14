@@ -1,0 +1,19 @@
+cflags:
+{
+  -std=c99
+  -I$CURDIR/util
+  -I$LEGATO_ROOT/components/spiLibrary
+}
+
+requires:
+{
+  component:
+  {
+    ${LEGATO_ROOT}/components/spiLibrary
+  }
+
+sources:
+{
+  analoginputs.c
+  $CURDIR/util/util.c
+}
